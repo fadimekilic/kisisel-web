@@ -3,49 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sitesi</title>
+    <title>Fadime Nur Kılıç - Kişisel Web Sitesi</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 24px;
         }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .container {
+            background-color: #ffffff;
+            max-width: 650px;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            padding: 36px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 20px;
             text-align: center;
-            max-width: 450px;
         }
-        h1 { color: #2c3e50; font-size: 22px; }
-        p { color: #555; line-height: 1.5; }
-        .badge {
+        .about-section {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 28px;
+        }
+        .about-section h2 {
+            font-size: 17px;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+        .about-section p {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .dns-section h2 {
+            font-size: 17px;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #fcfcfc;
+        }
+        .record-type {
             display: inline-block;
-            background: #e1f5fe;
-            color: #0288d1;
-            padding: 5px 10px;
-            border-radius: 5px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
             font-size: 12px;
-            font-weight: bold;
-            margin: 5px;
         }
+        .type-a { background-color: #dbeafe; color: #1d4ed8; }
+        .type-cname { background-color: #e0e7ff; color: #4338ca; }
+        .type-mx { background-color: #fef3c7; color: #b45309; }
+        .type-ns { background-color: #dcfce7; color: #15803d; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Web Barındırma ve DNS Ödevi</h1>
-        <p>Bu site, ücretsiz alan adı ve hosting entegrasyonu ile yayına alınmış kişisel web sitesidir.</p>
-        <div>
-            <span class="badge">A Kaydı</span>
-            <span class="badge">CNAME</span>
-            <span class="badge">MX</span>
-            <span class="badge">NS</span>
-        </div>
+
+<div class="container">
+    <h1>Kişisel Web Siteme Hoş Geldiniz</h1>
+
+    <div class="about-section">
+        <h2>Hakkımda</h2>
+        <p>Merhaba, ben Fadime Nur Kılıç. Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Bu web sayfası, web barındırma ve DNS altyapısı yapılandırması ödevi kapsamında yayına alınmıştır.</p>
     </div>
+
+    <div class="dns-section">
+        <h2>DNS Kayıtlarım</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kayıt Türü</th>
+                    <th>Host / Ad</th>
+                    <th>Değer / Hedef</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="record-type type-a">A</span></td>
+                    <td>@</td>
+                    <td>185.199.108.153</td>
+                </tr>
+                <tr>
+                    <td><span class="record-type type-cname">CNAME</span></td>
+                    <td>www</td>
+                    <td>kapsonlu.de5.net</td>
+                </tr>
+                <tr>
+                    <td><span class="record-type type-mx">MX</span></td>
+                    <td>@</td>
+                    <td>mail.kapsonlu.de5.net (Öncelik: 10)</td>
+                </tr>
+                <tr>
+                    <td><span class="record-type type-ns">NS</span></td>
+                    <td>ns1</td>
+                    <td>ns1.dnshe.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
 </body>
 </html>
